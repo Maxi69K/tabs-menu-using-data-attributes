@@ -1,0 +1,151 @@
+/*   random images:      https://source.unsplash.com/random    */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+/**********************************************
+                Global styles
+**********************************************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 0 5px;
+  margin: auto;
+}
+
+/**********************************************
+                Specific styles
+**********************************************/
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+img {
+  border-radius: 5px;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.tabs-container {
+  width: 100%;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tabs-container .btn {
+  font-size: 9px;
+}
+
+.content {
+  display: none;
+}
+
+.btn.active {
+  background-color: #fff;
+  color: #222;
+  box-shadow: none;
+  border: 1px solid #666;
+  cursor: default;
+}
+
+.content.active {
+  display: block;
+}
+
+.content>h4 {
+  position: relative;
+  font-weight: 600;
+  font-size: 1.5rem;
+  animation: slideText .5s ease-out;
+}
+
+@keyframes slideText {
+  0% {
+    opacity: 0;
+    left: -200px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+/**************************************
+            @media Queries
+**************************************/
+
+@media all and (min-width: 412px) {
+  body {
+    padding: 0 10px;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+  }
+
+  img {
+    margin-bottom: 1.5rem;
+  }
+
+  .tabs-container .btn {
+    font-size: 13px;
+  }
+
+  .content>h4 {
+    font-size: 2rem;
+  }
+}
+
+@media all and (min-width: 576px) {
+  body {
+    padding: 0 50px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  body {
+    padding: 0 100px;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+  }
+
+  img {
+    margin-bottom: 2rem;
+  }
+
+  .tabs-container .btn {
+    font-size: 14px;
+  }
+
+  .content>h4 {
+    font-size: 2.28rem;
+  }
+}
+
+@media all and (min-width: 992px) {
+  body {
+    padding: 0;
+    max-width: 750px;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+  }
+
+  .tabs-container {
+    max-width: 750px;
+  }
+}
